@@ -1,0 +1,15 @@
+<ion-view id="page2" title="O que tem por aqui?">
+    <ion-content class="has-header" scroll="false" padding="false">
+        <div class="list card">
+            <div class="item item-divider" ng-bind="lugar.name || 'Buscando Lugares...'"></div>
+            <div class="item item-body">
+                <div id="mapa-lugares" style="width:100%;height:300px"></div>
+                <div class="button-bar">
+                    <button class="button button-assertive button-block icon ion-android-close" id="oQueTemPorAqui-nope" ng-click="proximo()"></button>
+                    <button class="button button-balanced button-block icon ion-android-done" id="oQueTemPorAqui-yeah" ng-click="selecionar()"></a>
+				</div>
+			</div>
+			<div class="item item-divider" ng-bind="lugar.vicinity || 'Estamos procurando Lugares perto de você :)'"></div>
+		</div>
+	</ion-content>
+</ion-view>

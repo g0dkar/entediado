@@ -1,0 +1,20 @@
+<ion-view id="page4" title="Configuracoes">
+	<ion-content class="has-header" padding="true">
+		<h3 style="color: rgb(0, 0, 0);" id="configuracoes-heading1">Localização</h3>
+		<form class="list">
+			<ion-item class="range range-positive">Distância
+				<input max="50" min="1" value="5" type="range" id="distancia">
+			</ion-item>
+			<div style="color: rgb(0, 0, 0);" id="configuracoes-markdown2">
+				<p>Estamos procurando lugares a <strong>{{options.radius | number}} KM</strong> de onde você está :)</p>
+			</div>
+		</form>
+		<h3 style="color: rgb(0, 0, 0);" id="configuracoes-heading4">Tipo de Lugares</h3>
+		<form class="list">
+			<label class="item item-select" style="height:60px">
+				<select ng-model="options.type" style="width:100%;max-width:100%;height:60px;text-align:left" ng-options="k as v for (k, v) in todosTipos">
+				</select>
+			</label>
+		</form>
+	</ion-content>
+</ion-view>

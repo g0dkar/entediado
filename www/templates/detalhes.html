@@ -1,0 +1,22 @@
+<ion-view id="page5" title="Detalhes">
+	<ion-content class="has-header" padding="true">
+		<img src="{{imagemLugar()}}" style="margin:auto;display:block;max-width:100%;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.5)" />
+
+		<h3 id="detalhes-heading3"><a href="https://www.google.com/maps?q={{link(lugar.vicinity)}}" ng-bind="lugar.name">Nome do Lugar</a></h3>
+		<h4 ng-bind="lugar.vicinity">Endereço</h4>
+		<h5 ng-show="lugar.rating">Nota: {{lugar.rating}}/5.0</h5>
+		<div ng-show="lugar.opening_hours">
+			<hr style="border:none;border-bottom:1px solid #ccc">
+			<h5>Neste momento, este lugar está <strong>{{lugar.opening_hours.open_now ? 'Aberto' : 'Fechado'}}</strong></h5>
+		</div>
+		<hr style="border:none;border-bottom:1px solid #ccc">
+		<div class="detalhe-categorias">
+			<h4>Categorias deste Lugar</h4>
+			<ul>
+				<li ng-repeat="type in lugar.types" ng-bind="::tipoLugar(type)"></li>
+			</ul>
+		</div>
+		<button class="button button-balanced button-large button-block button-outline" style="font-weight:lighter;" id="detalhes-button4" ng-click="irParaLugar()">Quero ir para lá =D</button>
+		<p style="font-style:italic;color:#999;font-size:.8em;text-align:center">Todas as Informações exibidas vieram do <a href="https://www.google.com/maps" target="_system">Google Maps</a></p>
+	</ion-content>
+</ion-view>

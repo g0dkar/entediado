@@ -1,0 +1,10 @@
+{
+  "name": "Entediado",
+  "app_id": "6d909552",
+  "proxies": [
+    {
+      "path": "/gmaps",
+      "proxyUrl": "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+    }
+  ]
+}
